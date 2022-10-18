@@ -6,11 +6,11 @@ const Messages = () => {
   const dispatch = useDispatch();
   const message = useSelector((state) => state.messages.message);
 
-  useEffect(() => {dispatch(getDataThunk())}, []);
+  useEffect(() => { dispatch(getDataThunk()); }, [dispatch]);
 
   return (
     <h1>{message}</h1>
   );
 };
 
-export default Messages
+export default Messages;

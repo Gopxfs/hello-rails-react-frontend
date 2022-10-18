@@ -16,11 +16,9 @@ const messagesSlice = createSlice({
     message: 'Greeting message',
   },
   extraReducers: {
-    [getDataThunk.fulfilled]: (state, { payload }) => {
-      return {
-        message: payload.text,
-      };
-    },
+    [getDataThunk.fulfilled]: (state, { payload }) => ({
+      message: payload.text,
+    }),
   },
 });
 
