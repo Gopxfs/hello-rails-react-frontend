@@ -13,7 +13,7 @@ export const getDataThunk = createAsyncThunk(
 const messagesSlice = createSlice({
   name: 'messages',
   initialState: {
-    message: 'Greeting message',
+    message: '',
   },
   extraReducers: {
     [getDataThunk.fulfilled]: (state, { payload }) => ({
